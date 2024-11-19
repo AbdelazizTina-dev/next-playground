@@ -1,18 +1,18 @@
-import { signIn } from "@/auth";
+import { signOut } from "@/auth";
 
-export default function SignIn() {
+export default function SignOut() {
   return (
     <form
       action={async () => {
         "use server";
-        await signIn("google");
+        await signOut();
       }}
     >
       <button
         className="font-work-sans text-red-500 font-semibold text-xl"
         type="submit"
       >
-        Login
+        Logout
       </button>
     </form>
   );
